@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>My librairie</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Ma librairie</h1>
+        <div class="contenue">
+            <h2>contenue</h2>
+            <div class="nombre-de-livre information">
+                <p>Nombre de livre : </p>
+                <p>0</p>
+            </div>
+            <div class="nombre-de-livre-lus information">
+                <p>Nombre de livre lus : </p>
+                <p>0</p>
+            </div>
+            <div class="nombre-de-livre-non-lus information">
+                <p>Nombre de livre non lus: </p>
+                <p>0</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="ajout-livre">
+            <div>
+                <button>Ajouter un livre</button>
+            </div>
+        </section>
+
+        <section class="form">
+            <div>
+                <button class="ferme">x</button>
+                <ul>
+                    <li>
+                        <label for="titre">Titre du livre</label>
+                        <input type="text" id="titre">
+                    </li>
+                    <li>
+                        <label for="auteur">Nom de l'auteur</label>
+                        <input type="text" id="auteur">
+                    </li>
+                    <li>
+                        <label for="page">Nombre de page</label>
+                        <input type="number" id="page">
+                    </li>
+                    <li>
+                        <label for="lus">L'avez-vous lus</label>
+                        <input type="checkbox" id="checkbox">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="display-de-la-liste">
+
+        </section>
+    </main>
+    
+
+
+    <script src="javascript/javascript.js"></script>
+</body>
+</html>
