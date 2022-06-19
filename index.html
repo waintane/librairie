@@ -36,41 +36,36 @@
                 <button>Ajouter un livre</button>
             </div>
         </section>
-
         <section class="form">
-            <div>
-                <button class="ferme">x</button>
-                <ul>
-                    <li>
-                        <label for="titre">Titre du livre</label>
-                        <input type="text" id="titre">
-                    </li>
-                    <li>
-                        <label for="auteur">Nom de l'auteur</label>
-                        <input type="text" id="auteur">
-                    </li>
-                    <li>
-                        <label for="page">Nombre de page</label>
-                        <input type="number" id="page">
-                    </li>
-                    <li>
-                        <label for="lus">L'avez-vous lus</label>
-                        <input type="checkbox" id="checkbox" onclick="validate()">
-                    </li>
-                    <li>
-                        <button id="add">Ajouter</button>
-                    </li>
-                </ul>
-            </div>
+            <form>
+                <div>
+                    <button class="ferme">x</button>
+                    <ul>
+                        <li>
+                            <label for="titre">Titre du livre</label>
+                            <input type="text" id="titre" pattern="(?=.*[a-z]).{1,}" required>
+                        </li>
+                        <li>
+                            <label for="auteur">Nom de l'auteur</label>
+                            <input type="text" id="auteur" pattern="(?=.*[a-z]).{3,}" required>
+                        </li>
+                        <li>
+                            <label for="page">Nombre de page</label required>
+                            <input type="number" id="page">
+                        </li>
+                        <li>
+                            <label for="lus">L'avez-vous lus</label>
+                            <input type="checkbox" id="checkbox" onclick="validate()" required>
+                        </li>
+                        <li>
+                            <button type="submit" id="add">Ajouter</button>
+                        </li>
+                    </ul>
+                </div>
+            </form>
         </section>
 
         <section class="display-de-la-liste">
-            <div class="container">
-                <p>Titre: joejeoe</p>
-                <p>Auteur: efeflk</p>
-                <p>Nombre de page: 800</p>
-                <p>deja lus</p>
-            </div>
             <div class="container">
                 <p>Titre: joejeoe</p>
                 <p>Auteur: efeflk</p>

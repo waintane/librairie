@@ -13,9 +13,13 @@ let boutonFerme = document.querySelector(".ferme");
 let ouvrirAjouterLivre = document.querySelector(".ajout-livre button");
 let ajouterLivre = document.querySelector("#add");
 
-let livres = 0;
-let livreLus = 0;
+let livres = 1;
+let livreLus = 1;
 let livreNonLus =0;
+
+nombreDeLivre.innerHTML = livres;
+nombreDeLivreLus.innerHTML = livreLus;
+nombreDeLivreNonLus.innerHTML = livreNonLus;
 
 let visible = false;
 
@@ -48,7 +52,9 @@ boutonFerme.addEventListener("click",   ()=>{
 })
 
 ajouterLivre.addEventListener("click", ()=>{
-    nouveauLivre(titreLivre.value,auteur.value,nombreDePage.value,lus.value);
+    if(titreLivre.value.length >= 2 && auteur.value.length >= 2){
+        nouveauLivre(titreLivre.value,auteur.value,nombreDePage.value,lus.value);
+    }
 })
 
 /* function */
@@ -87,4 +93,34 @@ function createContainer(livre){
     container.classList.add("container");
     document.querySelector(".display-de-la-liste").appendChild(container);
 
+    updateData();
+    clear();
+
+    
+}
+function clear(){
+    console.log("mom")
+    titreLivre.value = "";
+    auteur.value = "";
+    nombreDePage.value = "";
+    lus.value = "";
+}
+
+function updateData(){
+    if (lus.value == true){
+        livreLus ++;
+        nombreDeLivreLus.innerHTML = livreLus;
+        console.log("bro");
+    }
+    else if(lus.value == false){
+        livreNonLus ++;
+        nombreDeLivreNonLus.innerHTML = livreNonLus;
+        console.log("bro2");
+    }
+    livres ++;
+
+    console.log(lus.value);
+    nombreDeLivre.innerHTML = livres;
+    
+    
 }
