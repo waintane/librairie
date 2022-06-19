@@ -2,7 +2,7 @@
     visibility:hidden;
     width: 80%;
     margin: 0px auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(224, 224, 224);
     position: absolute;
     left:0;
     right:0;
@@ -44,4 +44,13 @@ h1,h2{
 }
 .ajout-livre{
     text-align: center;
+}
+.container{
+    width: 300px;
+    margin: 10px auto;
+    background-color: grey;
+}
+.display-de-la-liste{
+    display: grid;
+    grid-template-columns: 1fr;
 }
