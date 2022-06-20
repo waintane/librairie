@@ -1,3 +1,14 @@
+:root{
+    --main-color: rgb(31, 31, 31);
+    --main-font: rgb(240, 240, 240);
+    --button: linear-gradient(60deg,rgb(137, 243, 185),rgb(1, 153, 52));
+    --container-color: rgb(238, 238, 238);
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--main-color);
+    color: var(--main-font);
+}
 .form{
     visibility:hidden;
     position: fixed;
@@ -10,7 +21,7 @@
 .form form{
     width: 300px;
     margin: 30vh auto;
-    background-color: rgb(224, 224, 224);
+    background-color: var(--main-color);
     position: absolute;
     left:0;
     right:0;
@@ -31,6 +42,7 @@ ul{
 li{
     display: flex;
     flex-direction: column;
+    margin: 10px 0px;
 }
 li input{
     width: auto;
@@ -55,12 +67,24 @@ h1,h2{
 }
 .ajout-livre{
     text-align: center;
+    
+}
+.ajout-livre button{
+    background: var(--button);
 }
 .container{
+    color: black;
     width: 100%;
     height: 200px;
     margin: 10px auto;
-    background-color: grey;
+    background-color: var(--container-color);
+    font-weight: 550;
+}
+.container p{
+    margin-left: 10px;
+}
+.container p:first-of-type{
+    margin-top: 35px;
 }
 .display-de-la-liste{
     width: 80%;
@@ -70,10 +94,22 @@ h1,h2{
     grid-template-columns: 1fr;
     gap: 10px;
 }
+
 .ajout-livre button{
     width: 80%;
     min-width: 300px;
     height: 50px;
+}
+#add{
+    background: var(--button);
+    height: 30px;
+}
+.ferme{
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    outline: none;
+    border: none;
 }
 @media only screen and (min-width: 800px) {
 

@@ -58,7 +58,7 @@ ajouterLivre.addEventListener("click", ()=>{
     }
 })
 
-/* function */
+/* functions */
 
 function nouveauLivre(titreLivre,auteur,nombreDePage,lus){
     const livre = new CreateBook(titreLivre,auteur,nombreDePage,lus);
@@ -106,7 +106,6 @@ function createContainer(livre){
     
 }
 function clear(){
-    console.log("mom")
     titreLivre.value = "";
     auteur.value = "";
     nombreDePage.value = "";
@@ -118,16 +117,12 @@ function updateData(){
     if (lus.value == true || lus.value == "true"){
         livreLus ++;
         nombreDeLivreLus.innerHTML = livreLus;
-        console.log("bro");
     }
     else if(lus.value == false || lus.value == "false"){
         livreNonLus ++;
         nombreDeLivreNonLus.innerHTML = livreNonLus;
-        console.log("bro2");
     }
     livres ++;
-
-    console.log(lus.value);
     nombreDeLivre.innerHTML = livres;
     
     
