@@ -16,6 +16,7 @@ let ajouterLivre = document.querySelector("#add");
 let livres = 1;
 let livreLus = 1;
 let livreNonLus =0;
+lus.value = false;
 
 nombreDeLivre.innerHTML = livres;
 nombreDeLivreLus.innerHTML = livreLus;
@@ -83,7 +84,13 @@ function createContainer(livre){
     titreContainer.innerHTML = "Titre : " + livre.titre;
     auteurContainer.innerHTML = "Auteur : " + livre.auteur;
     nombreDePageContainer.innerHTML = "Nombre de page : " + livre.nombreDePage;
-    lusContainer.innerHTML = "lus : " + livre.lus;
+    if(livre.lus === "true"){
+        lusContainer.innerHTML = "Déjà lus";
+    }
+    else{
+        lusContainer.innerHTML = "Pas encore lus";
+    }
+    
 
     container.appendChild(titreContainer);
     container.appendChild(auteurContainer);
@@ -107,12 +114,13 @@ function clear(){
 }
 
 function updateData(){
-    if (lus.value == true){
+
+    if (lus.value == true || lus.value == "true"){
         livreLus ++;
         nombreDeLivreLus.innerHTML = livreLus;
         console.log("bro");
     }
-    else if(lus.value == false){
+    else if(lus.value == false || lus.value == "false"){
         livreNonLus ++;
         nombreDeLivreNonLus.innerHTML = livreNonLus;
         console.log("bro2");
